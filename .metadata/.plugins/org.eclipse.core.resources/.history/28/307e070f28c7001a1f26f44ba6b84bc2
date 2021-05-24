@@ -1,0 +1,14 @@
+package miscellaneous;
+
+public class Squareroot {
+
+	public static void main(String[] args) {
+		long l=4;
+		System.out.println(floorSqrt(l));
+
+	}
+	static long floorSqrt(long x)
+	 {
+	   return Math.round(Math.floor(Math.sqrt(x)));
+	 }
+}

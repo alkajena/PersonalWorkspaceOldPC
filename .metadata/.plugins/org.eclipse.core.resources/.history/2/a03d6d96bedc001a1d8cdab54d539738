@@ -1,0 +1,29 @@
+package dynamicProgramming;
+
+public class EggDroppingPuzzle {
+
+	public static void main(String[] args) {
+		int egg=2;
+		int floor=10;
+		System.out.println(EggDrop(egg,floor));
+	}
+	public static int EggDrop(int eg,int fl){
+		if(fl==0 || fl==1)
+			return fl;
+		if(eg==1)
+			return fl;
+		int res;
+		int min=Integer.MAX_VALUE;
+		for(int x=1;x<=fl;x++){
+			res=max(EggDrop(eg-1,x-1),EggDrop(eg,fl-x));
+			
+			if(res < min)
+				min=res;
+		}
+		return min+1;
+	}
+	
+	public static int max(int a,int b){
+		return a>b?a:b;
+	}
+}

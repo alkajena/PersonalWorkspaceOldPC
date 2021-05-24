@@ -1,0 +1,55 @@
+package greedyAlgorithm;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class KCenterProblems {
+
+	public static void main(String[] args) {
+		int[][] graph={{0,10,7,6,
+			10,0,8,5,
+			7,8,0,12,
+			6,5,12,0}};
+		int k=3;
+		findToPlaceATM(graph,k);
+	}
+	public static void findToPlaceATM(int[][] graph,int k){
+		int n=3;
+		int centers=1;
+		List<Integer> chosenCenter=new ArrayList<>();
+		chosenCenter.add(0);
+		List<Integer> otherCenters=new ArrayList<>();
+		for(int i=0;i<n;i++){
+			if(!chosenCenter.contains(i)){
+				otherCenters.add(i);
+			}
+		}
+		for(int j=0;j<otherCenters.size();j++){
+			int min=Integer.MAX_VALUE;
+			for(int a=0;a<chosenCenter.size();a++){
+				
+			}
+					
+		}
+		chosenCenter.add(0);
+		int farthest = 0;
+		int c2;
+		int max=0;
+		for(int i=0;i<4;i++){
+			if(graph[c1][i] > max){
+				max=graph[c1][i];
+				farthest=i;
+			}
+		}
+		max=0;
+		for(int i=0;i<4;i++){
+			if(i!=c1 && i!=farthest){
+				int min=Math.min(graph[c1][i], graph[farthest][i]);
+				if(min > max){
+					max=min;
+					c2=i;
+				}
+			}
+		}
+	}
+}

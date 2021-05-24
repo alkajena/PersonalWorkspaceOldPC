@@ -1,0 +1,34 @@
+package linkedListDSA;
+
+public class SingleLinkedListInsertion {
+	
+	Node head;
+	
+	static class Node{
+		int data;
+		Node next;
+		
+		Node(int data){
+			this.data=data;
+			this.next=null;
+		}
+	}
+	
+	public void insert(SingleLinkedListInsertion list,int data){
+		//create a new node
+		Node newNode=new Node(8);
+		 
+		if(list.head==null){
+			list.head=newNode;
+		}
+		else{
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

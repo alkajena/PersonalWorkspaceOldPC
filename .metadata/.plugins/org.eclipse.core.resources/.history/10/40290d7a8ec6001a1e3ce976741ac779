@@ -1,0 +1,49 @@
+package miscellaneous;
+
+public class FindKClosestElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static int crossOverPoint(Integer[] arr,int x,int l,int h){
+		int m=l+((h-l)/2);
+		
+		if(arr[m]==x)
+			return m;
+		if(x < arr[m])
+			return crossOverPoint(arr,x,l,m-1);
+		else
+			return crossOverPoint(arr,x,m+1,h);
+	
+	}
+	public static void findKclosestElement(Integer[] arr,int x,int k){
+		int l=crossOverPoint(arr,k,0,arr.length-1);
+		int r=l+1;
+		int count=0;
+		if(arr[l]==x)
+			l--;
+		
+		while(l>=0 && r<arr.length && count <= k){
+			if(x-arr[l] < arr[r]-x){
+				System.out.println(arr[l]);
+				l--;
+			}
+			else{
+				System.out.println(arr[r]);
+				r++;
+			}
+		}
+		
+		while(count<=k && l>=0){
+			System.out.println(arr[l]);
+			l--;
+		}
+		
+		while(count<=k && r<arr.length){
+			System.out.println(arr[l]);
+			l--;
+		}
+	}
+
+}

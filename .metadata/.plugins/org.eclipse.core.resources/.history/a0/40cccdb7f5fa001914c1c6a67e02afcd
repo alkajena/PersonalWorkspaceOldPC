@@ -1,0 +1,56 @@
+package linkedListDSA;
+
+
+
+public class SingleLinkedListDeletion {
+
+	Node head;
+	
+	static class Node{
+		int data;
+		Node next;
+		
+		Node(int data){
+			this.data=data;
+			this.next=null;
+		}
+	}
+	
+	public static void delete(SingleLinkedListDeletion list,int data){
+		Node prev;
+		if(list.head!=null){
+			if(list.head.next!=null){
+				if(list.head.data==data){
+					list.head=list.head.next;
+				}
+				else{
+					while(list.head!=null){
+						prev=list.head;
+						if(prev.next.data==data){
+							prev.next=prev.next.next;
+						}
+						list.head=list.head.next;
+					}
+				}
+			}
+		}
+		
+		
+		while(list.head!=null){
+			System.out.println(list.head.data);
+			list.head=list.head.next;
+		}
+	}
+
+	public static void main(String[] args) {
+		SingleLinkedListDeletion list = new SingleLinkedListDeletion(); 
+		  insert(list, 1); 
+		  insert(list, 2); 
+		  insert(list, 3); 
+		  insert(list, 4); 
+		  insert(list, 5); 
+	      
+
+	}
+
+}

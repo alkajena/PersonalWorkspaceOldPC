@@ -1,0 +1,14 @@
+package miscellaneous;
+
+public class KthSmallestElementByQuickSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void kthSmallestElement(Integer[] arr,int k,int l,int r){
+		if(k > l && k <= (r-l)+1){
+			int post=partition(arr,l,r);
+		}
+	}
+}

@@ -1,0 +1,70 @@
+package treeGeeksForGeeksQuestions;
+
+public class InOrderSuccessorOfBinaryTree {
+	Node root;
+	static Node temp=new Node();
+	public InOrderSuccessorOfBinaryTree(int key){
+		root=new Node(key);
+	}
+	static class Node{
+		int key;
+		Node left;
+		Node right;
+		
+		public Node(int key){
+			this.key=key;
+			left=right=null;
+		}
+
+		public Node() {
+			
+		}
+	}
+	
+	static Node leftMostNode(Node node){
+		Node temp = null;
+		while(node!=null){
+			temp=node;
+			node=node.left;
+		}
+		return temp;
+	}
+	
+	static Node rightMostNode(Node node){
+		Node temp = null;
+		while(node!=null){
+			temp=node;
+			node=node.right;
+		}
+		return temp;
+	}
+	
+	static Node inOrderSuccessor(Node root,Node x){
+		if(x.right!=null){
+			return leftMostNode(x.right);
+		}
+		else if(x.right==null){
+			Node rightMostNode=rightMostNode(root);
+			if(rightMostNode==x){
+				System.out.print("right most node of tree. So can not have inorder successor");
+				return null;
+			}
+			else{
+				if(root==x || (temp=inOrderSuccessor(root.left,x))!=null || (temp=inOrderSuccessor(root.right, x))!=null){
+					if(temp!=null){
+						if(temp.left==x){
+							System.out.println("inorder successor is :"+temp.key);
+							return null;
+						}
+					}
+					return root;
+				}
+			}
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

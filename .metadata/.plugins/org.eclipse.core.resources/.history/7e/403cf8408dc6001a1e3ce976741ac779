@@ -1,0 +1,16 @@
+package miscellaneous;
+
+public class FindKClosestElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public int crossOverPoint(Integer[] arr,int x,int k){
+		return -1;
+	}
+	public static void findKclosestElement(Integer[] arr,int x,int k){
+		int l=crossOverPoint(arr,k,x);
+	}
+
+}

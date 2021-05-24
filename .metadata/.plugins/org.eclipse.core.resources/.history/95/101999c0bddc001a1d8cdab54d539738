@@ -1,0 +1,14 @@
+package dynamicProgramming;
+
+public class EggDroppingPuzzle {
+
+	public static void main(String[] args) {
+		int egg=2;
+		int floor=10;
+		System.out.println(EggDrop(egg,floor));
+	}
+	public static int EggDrop(int eg,int fl){
+		if(fl==0 || fl==1)
+			return fl;
+	}
+}

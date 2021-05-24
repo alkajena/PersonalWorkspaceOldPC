@@ -1,0 +1,45 @@
+package greedyAlgorithm;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Countcoinsproblem {
+
+	public static void main(String[] args) {
+		//Denomination array
+		Integer[] arr={1000,500,100,50,20,10,5,2,1};
+		//Amount to be converted to denomination
+		int V=93;
+		
+		countMinimumCoins(arr,V);
+
+	}
+	public static Map<String,String> countMinimumCoins(Integer[] arr,int V){
+		if(V==0){
+			Map<String,String> map=new HashMap<>();
+			map.put("count", "0");
+			map.put("coin", "");
+			return map;
+		}
+		Integer res=Integer.MAX_VALUE;
+		Map<String,String> map1=new HashMap<>();
+		for(int i=0;i<arr.length;i++){
+			
+			while(V>=arr[i]){
+				Map<String,String> map=new HashMap<>();
+				map=countMinimumCoins(arr,V-arr[i]);
+				int subRes=Integer.valueOf(map.get("count"));
+				 String coins=map.get("coin");
+				if(subRes!=Integer.MAX_VALUE && subRes+1<res){
+					res=subRes+1;
+					coins=coins+arr[i];
+					map1.put("count", res.toString());
+					map1.put("coin", coins);
+					
+				}
+			}
+		}
+		return map1;
+		
+	}
+}

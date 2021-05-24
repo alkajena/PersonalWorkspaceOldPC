@@ -1,0 +1,40 @@
+package miscellaneous;
+
+public class KthSmallestElementByQuickSort {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static int partition(Integer[] arr,int l,int r){
+		int pivot=arr[r];
+		int i= l-1;
+		for(int j=l;j<arr.length;j++){
+			if(arr[j] < pivot){
+				i++;
+				int temp=arr[i];
+				arr[i]=arr[j];
+				arr[j]=temp;
+			}
+		}
+		int temp=arr[i+1];
+		arr[i+1]=arr[r];
+		arr[r]=temp;
+		
+		return i+1;
+	}
+	public static int kthSmallestElement(Integer[] arr,int k,int l,int r){
+		if(k > l && k <= (r-l)+1){
+			int pos=partition(arr,l,r);
+			
+			if(pos==k-1)
+				return pos;
+			
+			if(pos > k-1)
+				return kthSmallestElement(arr,k,l,pos-1);
+			else
+				return kthSmallestElement(arr,k,pos+1,k);
+		}
+		return Integer.MAX_VALUE;
+	}
+}

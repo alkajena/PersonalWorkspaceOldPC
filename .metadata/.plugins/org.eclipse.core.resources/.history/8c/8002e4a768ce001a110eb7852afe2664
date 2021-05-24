@@ -1,0 +1,26 @@
+package greedyAlgorithm;
+
+public class KCenterProblems {
+
+	public static void main(String[] args) {
+		int[][] graph={{0,10,7,6,
+			10,0,8,5,
+			7,8,0,12,
+			6,5,12,0}};
+		int k=3;
+		findToPlaceATM(graph,k);
+	}
+	public static void findToPlaceATM(int[][] graph,int k){
+		int c1=0;
+		int c2;
+		int c3;
+		int max=0;
+		for(int i=0;i<4;i++){
+			if(graph[c1][i] > max){
+				max=graph[c1][i];
+				c2=i;
+			}
+		}
+		
+	}
+}

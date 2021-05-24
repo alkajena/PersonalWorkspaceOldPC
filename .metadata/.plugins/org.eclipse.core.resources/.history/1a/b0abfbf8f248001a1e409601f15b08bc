@@ -1,0 +1,30 @@
+package praticesortingQuestion;
+
+public class MergeSort {
+	
+	public static void sort(int[] arr,int l,int r){
+		if(l<r){
+			int m=(l+r)/2;
+			sort(arr,0,m);
+			sort(arr,m+1,r);
+			mergeSort(arr,l,m,r);
+		}
+	}
+	
+	public static void mergeSort(int[] arr,int l,int m, int r){
+		int lsize=m-l+1;
+		int rsize=r-m;
+		
+		int[] larr=new int[lsize];
+		int[] rArr=new int[rsize];
+		
+	}
+
+	public static void main(String[] args) {
+		int[] arr=new int[]{12,11,13,5,6};
+		sort(arr,0,arr.length-1);
+		
+
+	}
+
+}

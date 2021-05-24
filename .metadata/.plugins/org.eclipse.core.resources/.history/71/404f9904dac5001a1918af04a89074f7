@@ -1,0 +1,12 @@
+package collectionsFramework;
+
+import java.util.ArrayList;
+
+public class Collection {
+
+	public static void main(String[] args) {
+		Collection c=new ArrayList<>();
+
+	}
+
+}

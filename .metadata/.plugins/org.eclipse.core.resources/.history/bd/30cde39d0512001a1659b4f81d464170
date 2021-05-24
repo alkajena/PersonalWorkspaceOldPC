@@ -1,0 +1,40 @@
+package treeGeeksForGeeksQuestions;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LevelOrderTraversalSpiralForm {
+	Node root;
+	public LevelOrderTraversalSpiralForm(int key){
+		root=new Node(key);
+	}
+	static class Node{
+		int key;
+		Node left;
+		Node right;
+		
+		public Node(int key){
+			this.key=key;
+			left=right=null;
+		}
+	}
+	
+	static void spiralTraversal(Node root){
+		List list=new ArrayList<>();
+		list.add(root);
+		int level=1;
+		int nodecount=2^0;
+		while(list.size()!=0){
+			if(level%2==0){
+				
+				
+			}
+				
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

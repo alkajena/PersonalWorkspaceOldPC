@@ -1,0 +1,13 @@
+package greedyAlgorithm;
+
+public class KCenterProblems {
+
+	public static void main(String[] args) {
+		int[][] graph={{0,10,7,6,
+			10,0,8,5,
+			7,8,0,12,
+			6,5,12,0}};
+		
+	}
+
+}

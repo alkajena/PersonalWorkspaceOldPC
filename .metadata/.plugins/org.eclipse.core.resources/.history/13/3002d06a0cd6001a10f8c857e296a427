@@ -1,0 +1,14 @@
+package dynamicProgramming;
+
+public class EditDistnace {
+
+	public static void main(String[] args) {
+		String str1="Alka";
+		String str2="Alma";
+		int m=str1.length();
+		int n=str2.length();
+		System.out.println(editDistance(str1,str2,m,m));
+
+	}
+	public static int editDistnace(String str1,String str2)
+}

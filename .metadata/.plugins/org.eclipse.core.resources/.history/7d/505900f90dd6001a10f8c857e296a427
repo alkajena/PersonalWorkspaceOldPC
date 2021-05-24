@@ -1,0 +1,43 @@
+package dynamicProgramming;
+
+public class EditDistnace {
+
+	public static void main(String[] args) {
+		String str1="sunday";
+		String str2="saturday";
+		int m=str1.length();
+		int n=str2.length();
+		System.out.println(editDistnace(str1,str2,m,m));
+
+	}
+	public static int editDistnace(String str1,String str2,int m,int n){
+		if(m==0)
+			return n;
+		if(n==0)
+			return m;
+		if(str1.charAt(m-1)==str2.charAt(n-1))
+			return editDistnace(str1,str2,m-1,n-1);
+		else
+			return 1+(min(editDistnace(str1,str2,m,n-1),editDistnace(str1,str2,m-1,n),editDistnace(str1,str2,m-1,n-1)));
+	}
+	
+	public static int min(int a,int b,int c){
+		int min1= a<b?a:b;
+		int min2=c<min1?c:min1;
+		return min2;
+	}
+	
+	public static editdistanceDP(String str1,string str2,int m,int n){
+		Integer[][] res=new Integer[m+1][n+1];
+		
+		for(int i=0;i<=m;i++){
+			for(int j=0;j<=n;j++){
+				if(i==0)
+					res[i][j]=j;
+				if(j==0)
+					res[i][j]=i;
+					
+			}
+		}
+	}
+}

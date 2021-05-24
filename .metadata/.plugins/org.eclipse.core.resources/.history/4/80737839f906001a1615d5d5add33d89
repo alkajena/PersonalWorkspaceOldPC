@@ -1,0 +1,38 @@
+package treeDSA;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class BinaryTreeToBST {
+	
+	static class Node{
+		int key;
+		Node left;
+		Node right;
+		
+		public Node(int value){
+			key=value;
+			left=null;
+			right=null;
+		}
+	}
+	
+	static class BinaryTree{
+		Node root;
+		
+		public BinaryTree(int key){
+			root=new Node(key);
+		}
+		
+		static void insertion(Node root,int key){
+			List list=new ArrayList<>();
+			list.add(r);
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}

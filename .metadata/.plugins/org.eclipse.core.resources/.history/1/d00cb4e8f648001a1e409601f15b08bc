@@ -1,0 +1,13 @@
+package praticesortingQuestion;
+
+public class InsertionSort {
+
+	public static void sort(int[] arr,int l,int h){
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,11 @@
+package praticesortingQuestion;
+
+public class QuickSort {
+
+	public static void main(String[] args) {
+		int[] arr=new int[]{12,11,13,5,6};
+		sort(arr,0,arr.legth-1);
+
+	}
+
+}

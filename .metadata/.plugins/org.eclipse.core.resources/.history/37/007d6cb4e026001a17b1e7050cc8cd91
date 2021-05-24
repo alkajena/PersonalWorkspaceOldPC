@@ -1,0 +1,36 @@
+package arrayDSA;
+
+public class MethodOverloading {
+	 
+	 static String s = " "; 
+	    protected Alpha()  
+	    { 
+	        s += "alpha "; 
+	    } 
+	    public static void main(String[] args)  
+	    { 
+	        new MethodOverloading(); 
+	        System.out.println(s); 
+	    } 
+	}
+
+class SubAlpha extends MethodOverloading  
+{ 
+    private SubAlpha()  
+    { 
+        s += "sub "; 
+    } 
+} 
+  
+ class SubSubAlpha extends SubAlpha  
+{ 
+    private SubSubAlpha()  
+    { 
+        s += "subsub "; 
+    } 
+    public static void main(String[] args)  
+    { 
+        new SubSubAlpha(); 
+        System.out.println(s); 
+    } 
+} 

@@ -1,0 +1,26 @@
+package greedyAlgorithm;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class NMeetingsInOneRoom {
+
+	public static void main(String[] args) {
+		int[] strtTime={1,3,0,5,8,5};
+		int[] finishTime={2,4,6,7,9,9};
+		findMaximumMeetings(strtTime,finishTime,6);
+		Arrays.sort(finishTime);
+	}
+	
+	public static void findMaximumMeetings(int[] strtTime,int[] finishTime,int x){
+		int s=1;int f=0;
+		List<Integer> result=new ArrayList<>();
+		for(int i=0;i<x;i++){
+			if(finishTime[i] <= strtTime[++i]){
+				result.add(i);
+			}
+		}
+	}
+
+}

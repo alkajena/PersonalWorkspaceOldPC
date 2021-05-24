@@ -1,0 +1,25 @@
+package javapackage;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class ExcepionHandling {
+	
+	public void fun(Integer i) 
+    { 
+        System.out.println("fun(Integer ) "); 
+    } 
+    public void fun(String name) 
+    { 
+        System.out.println("fun(String ) "); 
+    } 
+
+	public static void main(String[] args) {
+		ExcepionHandling mv = new ExcepionHandling(); 
+		  
+	        // This line causes error 
+	        mv.fun(null); 
+	}
+} 

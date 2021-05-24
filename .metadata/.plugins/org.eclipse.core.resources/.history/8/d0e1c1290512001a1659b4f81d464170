@@ -1,0 +1,28 @@
+package treeGeeksForGeeksQuestions;
+
+public class LevelOrderTraversalSpiralForm {
+	Node root;
+	public LevelOrderTraversalSpiralForm(int key){
+		root=new Node(key);
+	}
+	static class Node{
+		int key;
+		Node left;
+		Node right;
+		
+		public Node(int key){
+			this.key=key;
+			left=right=null;
+		}
+	}
+	
+	static void spiralTraversal(Node root){
+		List list=new ArrayList<>();
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package greedyAlgorithm;
+
+public class DijkstraPractice {
+
+	public static void main(String[] args) {
+		int[][] graph={{0,1,43},{1,0,6},{43,6,0}};
+		int sourceVertex=0;
+		int vertex=3;
+		Dijkstra(graph,sourceVertex,vertex);
+
+	}
+	public static void Dijkstra(int[][] graph,int s,int v){
+		int[] dist=new int[v];
+		boolean[] mst=new boolean[v];
+		for(int i=0;i<v;i++){
+			dist[i]=Integer.MAX_VALUE;
+			mst[i]=false;
+		}
+	}
+}

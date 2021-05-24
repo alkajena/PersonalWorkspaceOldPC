@@ -1,0 +1,24 @@
+package arrayDSA;
+
+public class MethodOverloading {
+	 
+	 private final void flipper()  
+	    { 
+	        System.out.println("Clidder"); 
+	    } 
+	
+	
+	}
+
+class Derived extends MethodOverloading 
+{ 
+	 public final void flipper()  
+	    { 
+	        System.out.println("Clidlet"); 
+	    } 
+	    public static void main(String[] args)  
+	    { 
+	        new Derived().flipper(); 
+	    } 
+  
+} 

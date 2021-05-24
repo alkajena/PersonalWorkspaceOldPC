@@ -1,0 +1,27 @@
+package dynamicProgramming;
+
+public class LongestPalindromeSubsequence {
+
+	public static void main(String[] args) {
+		String str="GEEKSFORGEEKS";
+		int i=0;
+		int length=str.length()-1;
+		palindrome(str,i,length);
+
+	}
+
+	public static int palindrome(String str,int i,int j){
+		
+		if(i==j)
+			return 1;
+		if((j==(i+1)) && str.charAt(i)==str.charAt(j)){
+			return 2;
+		}
+		else if(str.charAt(i)==str.charAt(j)){
+			return 2+palindrome(str,i+1,j-1);
+		}
+		else{
+			return max(palindrome(str,i+1,j-1),palindrome(str,i+1,j-1));
+		}
+	}
+}

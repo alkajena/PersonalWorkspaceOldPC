@@ -1,0 +1,13 @@
+package greedyAlgorithm;
+
+public class Countcoinsproblem {
+
+	public static void main(String[] args) {
+		//Denomination array
+		Integer[] arr={1000,500,100,50,20,10,5,2,1};
+		//Amount to be converted to denomination
+		int V=93;
+
+	}
+
+}

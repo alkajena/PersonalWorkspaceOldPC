@@ -1,0 +1,39 @@
+package arrayDSA;
+
+public class MethodOverloading {
+	 
+	 static String s = " "; 
+	 /*   public MethodOverloading()  
+	    { 
+	        s += "alpha "; 
+	    } 
+	    
+	    public MethodOverloading(int a)  
+	    { 
+	        s += "alpha "+a; 
+	    } */
+	    public static void main(String[] args)  
+	    { 
+	        new SubAlpha(2); 
+	        System.out.println(s); 
+	        Integer decimalExample = Integer.parseInt("20"); 
+	        int signedPositiveExample = Integer.valueOf("+20"); 
+	        int signedNegativeExample = Integer.valueOf("-20"); 
+	    } 
+	}
+
+class SubAlpha extends MethodOverloading  
+{ 
+    public SubAlpha()  
+    { 
+    	System.out.print("child default");
+        s += "sub "; 
+    } 
+    
+    public SubAlpha(int a)  
+    { 
+    	System.out.print("child parameterized");
+        s += "sub "+a; 
+    } 
+
+} 

@@ -1,0 +1,33 @@
+package treeGeeksForGeeksQuestions;
+
+public class InOrderSuccessorOfBinaryTree {
+	Node root;
+	
+	public InOrderSuccessorOfBinaryTree(int key){
+		root=new Node(key);
+	}
+	static class Node{
+		int key;
+		Node left;
+		Node right;
+		
+		public Node(int key){
+			this.key=key;
+			left=right=null;
+		}
+	}
+	
+	static Node leftMostNode(Node node){
+		Node temp = null;
+		while(node!=null){
+			temp=node;
+			node=node.left;
+		}
+		return temp;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package praticesortingQuestion;
+
+public class MergeSort {
+	
+	public static void sort(int[] arr,int l,int r){
+		if(l<r){
+			int m=(l+r)/2;
+			
+		}
+	}
+
+	public static void main(String[] args) {
+		int[] arr=new int[]{12,11,13,5,6};
+		sort(arr,0,arr.length-1);
+		
+
+	}
+
+}

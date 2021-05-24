@@ -1,0 +1,21 @@
+package treeDSA;
+
+public class BinaryTreeToBST {
+	
+	static class Node{
+		int key;
+		Node left;
+		Node right;
+		
+		public Node(int value){
+			key=value;
+			left=null;
+			right=null;
+		}
+	}
+	public static void main(String[] args) {
+		
+
+	}
+
+}

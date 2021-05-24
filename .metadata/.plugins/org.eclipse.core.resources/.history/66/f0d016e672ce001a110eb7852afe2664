@@ -1,0 +1,21 @@
+package greedyAlgorithm;
+
+public class JobSequencingProblem {
+
+	class Job{
+		char jobId;
+		int deadLine;
+		int profit;
+		
+		public Job(char j,int d,int p){
+			this.jobId=j;
+			this.deadLine=d;
+			this.profit=p;
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

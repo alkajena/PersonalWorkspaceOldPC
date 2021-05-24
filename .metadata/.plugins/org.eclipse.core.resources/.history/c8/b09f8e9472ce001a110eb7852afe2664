@@ -1,0 +1,15 @@
+package greedyAlgorithm;
+
+public class JobSequencingProblem {
+
+	class Job{
+		char jobId;
+		int deadLine;
+		int profit;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

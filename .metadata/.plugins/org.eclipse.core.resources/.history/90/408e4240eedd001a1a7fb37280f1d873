@@ -1,0 +1,55 @@
+package dynamicProgramming;
+
+public class LongestPalindromeSubsequence {
+
+	public static void main(String[] args) {
+		String str="GEEKSFORGEEKS";
+		int i=0;
+		int length=str.length()-1;
+		System.out.println(palindrome(str,i,length));
+
+	}
+	public static int max(int a,int b){
+		return a>b?a:b;
+	}
+	public static int palindrome(String str,int i,int j){
+		
+		if(i==j)
+			return 1;
+		if((j==(i+1)) && str.charAt(i)==str.charAt(j)){
+			return 2;
+		}
+		else if(str.charAt(i)==str.charAt(j)){
+			return 2+palindrome(str,i+1,j-1);
+		}
+		else{
+			return max(palindrome(str,i+1,j),palindrome(str,i,j-1));
+		}
+	}
+	
+	public static int palindromeDP(String str,int i,int j){
+		int[][] res=new int[j][j];
+		
+		for(int k=0;k<str.length();k++){
+			res[k][k]=1;
+		}
+		int n=str.length();
+		for(int cl=2;cl<n;cl++){
+			for(int x=0;x<(n-cl+1);x++){
+				
+			}
+		}
+		if(i==j)
+			return 1;
+		if((j==(i+1)) && str.charAt(i)==str.charAt(j)){
+			return 2;
+		}
+		else if(str.charAt(i)==str.charAt(j)){
+			return 2+palindrome(str,i+1,j-1);
+		}
+		else{
+			return max(palindrome(str,i+1,j),palindrome(str,i,j-1));
+		}
+	}
+	
+}

@@ -1,0 +1,11 @@
+package praticesortingQuestion;
+
+public class MergeSort {
+
+	public static void main(String[] args) {
+		int[] arr=new int[]{12,11,13,5,6};
+		
+
+	}
+
+}

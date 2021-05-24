@@ -1,0 +1,16 @@
+package dynamicProgramming;
+
+public class MinimumCostPath {
+
+	public static void main(String[] args) {
+		int cost[][]= {{1, 2, 3}, 
+                {4, 8, 2}, 
+                {1, 5, 3}}; 
+ System.out.println(minCost(cost,2,2)); 
+	}
+
+public static int minCost(int[][] cost,int m,int n){
+	int[][] dp=new int[m+1][n+1];
+	
+}
+}

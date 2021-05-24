@@ -1,0 +1,36 @@
+package greedyAlgorithm;
+
+import java.util.Comparator;
+
+public class JobSequencingProblem {
+
+	class Job{
+		char jobId;
+		int deadLine;
+		int profit;
+		
+		public Job(char j,int d,int p){
+			this.jobId=j;
+			this.deadLine=d;
+			this.profit=p;
+		}
+		
+	}
+	
+	class MyComparator implements Comparator<Job>{
+
+		@Override
+		public int compare(Job o1, Job o2) {
+			Job j1=(Job)o1;
+			Job j2=(Job)o2;
+			
+			return j2.deadLine.compareTo(j1.deadLine);
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
